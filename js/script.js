@@ -6,17 +6,40 @@ const webPro = document.querySelectorAll('#pro')[1];
 const box = document.querySelectorAll('.more .btn');
 const close = document.querySelector('.modal .close');
 const modal = document.querySelector('.modal');
-
 close.addEventListener('click', () => {
     modal.classList.add('hide');
     document.querySelector('#container').style.filter = 'blur(0)';
 })
 box.forEach(el => {
     el.addEventListener('click', () => {
+        // updateModal(el.getAttribute('data-num'))
         modal.classList.remove('hide');
         document.querySelector('#container').style.filter = 'blur(5px)';
     })
-})
+});
+const projects = [
+    {
+        title: "Project Name",
+        descr: "",
+        img: "",
+        demo: "",
+        gitOrFig: ""
+
+    }
+]
+function updateModal(n) {
+    document.querySelector('.modal img').setAttribute('src', ``);
+    document.querySelector('.modal .title').innerHTML = '';
+    document.querySelector('.modal .description').innerHTML = '';
+    if (n > 6) {
+        document.querySelector('.modal .demo').setAttribute('href', ``);
+        document.querySelector('.modal .github').setAttribute('href', ``);
+    }
+    else {
+        document.querySelector('.modal .demo').setAttribute('href', ``);
+        document.querySelector('.modal .design').setAttribute('href', ``);
+    }
+}
 web.addEventListener('click', () => {
     changePro(webPro, appPro, app, web);
 });

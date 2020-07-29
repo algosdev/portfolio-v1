@@ -206,12 +206,13 @@ p {
   margin: 10px auto;
 }
 
-.modal-container .goto .look {
+.modal-container .goto a {
+  color: #444;
   cursor: pointer;
 }
 
-.modal-container .goto .look a {
-  color: #444;
+.modal-container .goto a svg {
+  margin-top: 5px;
 }
 
 .modal-container .modal-details {
@@ -446,8 +447,8 @@ p {
 
 .portfolio {
   background: #444;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 96%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 96%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 98%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 98%, 0 100%);
   height: 110%;
 }
 
@@ -546,7 +547,7 @@ p {
 }
 
 .portfolio-container .project #pro .box img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -590,6 +591,12 @@ p {
   display: none;
 }
 
+.portfolio-container .all {
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
 .portfolio-container .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -598,7 +605,7 @@ p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 50px auto 80px;
+  margin: 10px auto 80px;
 }
 
 .skills-container {
@@ -933,8 +940,8 @@ p {
     max-width: 100%;
   }
   .portfolio {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 96%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 96%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 94%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 94%, 0 100%);
   }
   .skills-container .content {
     display: -ms-grid;
