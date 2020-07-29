@@ -326,6 +326,8 @@ p {
                     line-height: 150%;
                 }
                 .visual-icons {
+                    display: flex;
+                    justify-content: center;
                     svg {
                     margin: 10px;
                     }
@@ -385,6 +387,12 @@ p {
                 min-width: 280px;
                 width: 100%;
                 max-width: 400px;
+                button {
+                    background-color: transparent;
+                    &:hover {
+                        background: $yel;
+                    }
+                }
                 input, textarea {
                     width: 100%;
                     font-family: 'Modulus';

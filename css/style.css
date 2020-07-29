@@ -469,6 +469,15 @@ p {
   line-height: 150%;
 }
 
+.skills-container .content .skills .visual-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .skills-container .content .skills .visual-icons svg {
   margin: 10px;
 }
@@ -553,6 +562,14 @@ p {
   min-width: 280px;
   width: 100%;
   max-width: 400px;
+}
+
+.contact-container .content .form button {
+  background-color: transparent;
+}
+
+.contact-container .content .form button:hover {
+  background: #DEC79B;
 }
 
 .contact-container .content .form input, .contact-container .content .form textarea {
