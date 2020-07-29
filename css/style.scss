@@ -73,32 +73,43 @@ p {
 .lg {
     font-size: 3em;
 }
+.rc-anchor-light {
+    background: $yel !important;
+    color: $dark !important; 
+    min-width: 280px;
+    width: 100%;
+    max-width: 400px;
+}
 .modal {
     position: fixed;
-    background: $yel;
-    color:$dark;
-    width: 95%;
-    max-height: 560px;
-    max-width: 800px;
     z-index: 11;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    border-radius: 20px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 1;
-    transition: 0.5s;
+    transition: 0.3s;
     &.hide {
         opacity: 0;
-        transform: translate(-50%, -50%) scale(0);
-        transition: 0.5s;
+        transform: scale(0);
     }
     &-container {
+        background: $yel;
+        margin: 10px;
+        color:$dark;
+        border-radius: 20px;
         position: relative;
         padding: 15px 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        max-width: 800px;
         .close {
             position: absolute;
             right: 5px;
@@ -131,6 +142,12 @@ p {
         justify-content: space-evenly;
         max-width: 300px;
         margin: 10px auto;
+        .look {
+            cursor: pointer;
+            a {
+                color: $dark;
+            }
+        }
     }
     .modal-details {
         text-align: center;
@@ -368,7 +385,7 @@ p {
                     .more {
                         position: absolute;
                         transition: 0.5s;
-                        background: #dec79bad;
+                        background: #dec79b8e;
                         margin: auto;
                         left: 0;
                         opacity: 0;

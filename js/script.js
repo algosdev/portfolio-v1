@@ -9,15 +9,14 @@ const modal = document.querySelector('.modal');
 
 close.addEventListener('click', () => {
     modal.classList.add('hide');
-    document.querySelector('#container').style.filter = 'blur(0)'
+    document.querySelector('#container').style.filter = 'blur(0)';
 })
 box.forEach(el => {
     el.addEventListener('click', () => {
         modal.classList.remove('hide');
-        document.querySelector('#container').style.filter = 'blur(10px)'
+        document.querySelector('#container').style.filter = 'blur(5px)';
     })
 })
-
 web.addEventListener('click', () => {
     changePro(webPro, appPro, app, web);
 });
