@@ -47,6 +47,7 @@ a {
   border-radius: 5px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .btn.y {
@@ -75,6 +76,7 @@ p {
 
 #container {
   overflow: hidden;
+  position: relative;
 }
 
 .sm {
@@ -91,6 +93,109 @@ p {
 
 .lg {
   font-size: 3em;
+}
+
+.modal {
+  position: fixed;
+  background: #DEC79B;
+  color: #444;
+  width: 95%;
+  max-height: 560px;
+  max-width: 800px;
+  z-index: 11;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  border-radius: 20px;
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.modal.hide {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.modal-container {
+  position: relative;
+  padding: 15px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-container .close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  z-index: 10;
+}
+
+.modal-container .close:hover svg {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.modal-container .close svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.modal-container .modal-img {
+  max-width: 700px;
+  width: 100%;
+  margin-top: 30px;
+  margin-top: 20px auto;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-container .modal-img img {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.modal-container .goto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.modal-container .modal-details {
+  text-align: center;
+}
+
+.modal-container .modal-details .title {
+  font-size: 1.5em;
+  margin: 10px;
 }
 
 /* mobile */
@@ -391,10 +496,69 @@ p {
   min-width: 280px;
   width: 100%;
   max-width: 400px;
-  height: 200px;
+  height: 250px;
   background: #7ef0ff;
   margin: auto;
   color: #444;
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-container .project #pro .box:hover .more {
+  opacity: 1;
+}
+
+.portfolio-container .project #pro .box .img {
+  min-width: 280px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+}
+
+.portfolio-container .project #pro .box:hover .img {
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.portfolio-container .project #pro .box img {
+  max-width: 100%;
+  height: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.portfolio-container .project #pro .box .more {
+  position: absolute;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #dec79bad;
+  margin: auto;
+  left: 0;
+  opacity: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.portfolio-container .project #pro .box .more p {
+  font-size: 1.4em;
+  padding: 10px 0;
 }
 
 .portfolio-container .project #pro.back {
@@ -409,7 +573,7 @@ p {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 20px auto 100px;
+  margin: 50px auto 80px;
 }
 
 .skills-container {
