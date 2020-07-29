@@ -95,7 +95,7 @@ p {
   font-size: 3em;
 }
 
-.rc-anchor-light {
+#rc-anchor-container {
   background: #DEC79B !important;
   color: #444 !important;
   min-width: 280px;
