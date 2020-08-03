@@ -77,6 +77,8 @@ p {
 #container {
   overflow: hidden;
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .sm {
@@ -122,14 +124,18 @@ p {
       -ms-flex-align: center;
           align-items: center;
   opacity: 1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .modal.hide {
   opacity: 0;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.modal.back {
+  background: rgba(46, 46, 46, 0.8);
 }
 
 .modal-container {
@@ -154,13 +160,17 @@ p {
           align-items: center;
   width: 100%;
   max-width: 800px;
+  max-height: 500px;
 }
 
 .modal-container .close {
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 0;
+  top: 0;
   z-index: 10;
+  padding: 12px 15px;
+  border-radius: 50%;
+  background-color: #DEC79B;
 }
 
 .modal-container .close:hover svg {
@@ -178,8 +188,8 @@ p {
 .modal-container .modal-img {
   max-width: 700px;
   width: 100%;
-  margin-top: 30px;
-  margin-top: 20px auto;
+  margin-top: 0;
+  max-height: 400px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,12 +197,15 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .modal-container .modal-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  border-radius: 10px;
 }
 
 .modal-container .goto {
@@ -216,6 +229,7 @@ p {
 }
 
 .modal-container .modal-details {
+  padding: 0 10px;
   text-align: center;
 }
 
@@ -521,42 +535,46 @@ p {
 .portfolio-container .project #pro .box {
   min-width: 280px;
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
   height: 250px;
-  background: #7ef0ff;
   margin: auto;
   color: #444;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   position: relative;
 }
 
 .portfolio-container .project #pro .box:hover .more {
   opacity: 1;
+  overflow: hidden;
 }
 
 .portfolio-container .project #pro .box .img {
-  min-width: 280px;
-  width: 100%;
-  max-width: 400px;
   height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
 
-.portfolio-container .project #pro .box:hover .img {
-  filter: blur(5px);
+.portfolio-container .project #pro .box:hover .img img {
   -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 
 .portfolio-container .project #pro .box img {
-  width: 100%;
+  width: auto;
   height: 100%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-filter: blur(0);
           filter: blur(0);
+  border-radius: 5px;
 }
 
 .portfolio-container .project #pro .box .more {
   position: absolute;
+  border-radius: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: #dec79b8e;
@@ -1005,6 +1023,4 @@ p {
             align-items: center;
   }
 }
-
-/* Desktop */
 /*# sourceMappingURL=style.css.map */

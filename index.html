@@ -23,7 +23,7 @@
 
             </div>
             <div class="modal-img">
-                <img src='https://source.unsplash.com/random/600x300'>
+                <img src='/img/3.jpg'>
             </div>
             <div class="modal-details">
                 <p class='title'>Project Name</p>
@@ -31,7 +31,7 @@
                     by doing this app. A simple calculator, with elegent design. I tight up my fetching skills
                     by doing this app</p>
                 <div class="goto">
-                    <a href='#demo' class="look demo">
+                    <a href='#demo' class="look demo" onclick="window.open(this.href,'_blank');return false;">
                         <p>Demo:</p>
                         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -39,7 +39,7 @@
                                 fill="#444444" />
                         </svg>
                     </a>
-                    <a href='#figma' class="look figma">
+                    <a href='#figma' class="look figma" onclick="window.open(this.href,'_blank');return false;">
                         <p>Design:</p>
                         <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -50,7 +50,7 @@
                                 fill="#444444" />
                         </svg>
                     </a>
-                    <a href='#github' class="look github">
+                    <a href='#github' class="look github" onclick="window.open(this.href,'_blank');return false;">
                         <p>Code:</p>
                         <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -118,7 +118,7 @@
         <section class="portfolio" id='portfolio'>
             <div class="portfolio-container">
                 <p class="lg">Portfolio</p>
-                <p class='ms'>Here some of my works: </p>
+                <p class='ms'>Here some of my works with pure CSS and JS: </p>
                 <div class="project">
                     <div class="project-nav">
                         <p class='active' id='web'>Web Development</p>
@@ -127,7 +127,22 @@
                     <div id='pro'>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x401'>
+                                <img src='/img/1.jpg'>
+                            </div>
+                            <div class="more">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M32.8571 28.9143L46 42.0571L42.0571 46L28.9143 32.8571V30.7806L28.2046 30.0446C25.1134 32.7096 21.1671 34.1743 17.0857 34.1714C12.5543 34.1714 8.20848 32.3713 5.00429 29.1671C1.8001 25.9629 0 21.6171 0 17.0857C0 12.5543 1.8001 8.20848 5.00429 5.00429C8.20848 1.8001 12.5543 0 17.0857 0C21.6171 0 25.9629 1.8001 29.1671 5.00429C32.3713 8.20848 34.1714 12.5543 34.1714 17.0857C34.1714 21.3177 32.6206 25.208 30.0446 28.2046L30.7806 28.9143H32.8571ZM17.0857 3.94286L15.64 4.02171C15.0091 5.38857 14.0366 7.70171 13.3269 10.5143H20.8446C20.1349 7.70171 19.1623 5.38857 18.5314 4.02171C18.0583 3.94286 17.5851 3.94286 17.0857 3.94286V3.94286ZM28.4674 10.5143C26.9042 7.77952 24.4008 5.70576 21.4229 4.67886C22.0537 6.072 22.8686 8.096 23.4731 10.5143H28.4674ZM5.704 10.5143H10.6983C11.3029 8.096 12.1177 6.072 12.7486 4.67886C9.77065 5.70576 7.26719 7.77952 5.704 10.5143V10.5143ZM3.94286 17.0857C3.94286 18.4 4.15314 19.7931 4.54743 21.0286H10.1726L9.85714 17.0857L10.1726 13.1429H4.54743C4.15314 14.3783 3.94286 15.7714 3.94286 17.0857ZM29.624 21.0286C30.0183 19.7931 30.2286 18.4 30.2286 17.0857C30.2286 15.7714 30.0183 14.3783 29.624 13.1429H23.9989C24.4174 15.7548 24.4174 18.4167 23.9989 21.0286H29.624ZM12.8011 13.1429L12.4857 17.0857L12.8011 21.0286H21.3703C21.7888 18.4167 21.7888 15.7548 21.3703 13.1429H12.8011V13.1429ZM17.0857 30.2286C17.5589 30.2286 18.032 30.2286 18.4789 30.1497C19.136 28.7829 20.1349 26.4697 20.8446 23.6571H13.3269C14.0366 26.4697 15.0354 28.7829 15.6926 30.1497L17.0857 30.2286ZM28.4674 23.6571H23.4731C22.8686 26.0754 22.0537 28.0994 21.4229 29.4926C24.4008 28.4657 26.9042 26.3919 28.4674 23.6571ZM5.704 23.6571C7.26719 26.3919 9.77065 28.4657 12.7486 29.4926C12.1177 28.0994 11.3029 26.0754 10.6983 23.6571H5.704Z"
+                                        fill="#444444" />
+                                </svg>
+                                <p>Project Name</p>
+                                <div class='btn d' data-num='0'>Load more</div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="img">
+                                <img src='/img/2.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -142,7 +157,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x402'>
+                                <img src='/img/3.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -157,7 +172,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x403'>
+                                <img src='/img/4.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -172,7 +187,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x405'>
+                                <img src='/img/5.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -187,7 +202,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x404'>
+                                <img src='/img/6.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -200,9 +215,11 @@
                                 <div class='btn d' data-num='5'>Load more</div>
                             </div>
                         </div>
+                    </div>
+                    <div class="back" id='pro'>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/500x406'>
+                                <img src='/img/7.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -215,11 +232,9 @@
                                 <div class='btn d' data-num='6'>Load more</div>
                             </div>
                         </div>
-                    </div>
-                    <div class="back" id='pro'>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/501x400'>
+                                <img src='/img/8.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -234,7 +249,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/502x400'>
+                                <img src='/img/9.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -249,7 +264,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/503x400'>
+                                <img src='/img/10.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -264,7 +279,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/504x400'>
+                                <img src='/img/11.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -279,7 +294,7 @@
                         </div>
                         <div class="box">
                             <div class="img">
-                                <img src='https://source.unsplash.com/random/505x400'>
+                                <img src='/img/12.jpg'>
                             </div>
                             <div class="more">
                                 <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
@@ -290,21 +305,6 @@
                                 </svg>
                                 <p>Project Name</p>
                                 <div class='btn d' data-num='11'>Load more</div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <div class="img">
-                                <img src='https://source.unsplash.com/random/506x400'>
-                            </div>
-                            <div class="more">
-                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M32.8571 28.9143L46 42.0571L42.0571 46L28.9143 32.8571V30.7806L28.2046 30.0446C25.1134 32.7096 21.1671 34.1743 17.0857 34.1714C12.5543 34.1714 8.20848 32.3713 5.00429 29.1671C1.8001 25.9629 0 21.6171 0 17.0857C0 12.5543 1.8001 8.20848 5.00429 5.00429C8.20848 1.8001 12.5543 0 17.0857 0C21.6171 0 25.9629 1.8001 29.1671 5.00429C32.3713 8.20848 34.1714 12.5543 34.1714 17.0857C34.1714 21.3177 32.6206 25.208 30.0446 28.2046L30.7806 28.9143H32.8571ZM17.0857 3.94286L15.64 4.02171C15.0091 5.38857 14.0366 7.70171 13.3269 10.5143H20.8446C20.1349 7.70171 19.1623 5.38857 18.5314 4.02171C18.0583 3.94286 17.5851 3.94286 17.0857 3.94286V3.94286ZM28.4674 10.5143C26.9042 7.77952 24.4008 5.70576 21.4229 4.67886C22.0537 6.072 22.8686 8.096 23.4731 10.5143H28.4674ZM5.704 10.5143H10.6983C11.3029 8.096 12.1177 6.072 12.7486 4.67886C9.77065 5.70576 7.26719 7.77952 5.704 10.5143V10.5143ZM3.94286 17.0857C3.94286 18.4 4.15314 19.7931 4.54743 21.0286H10.1726L9.85714 17.0857L10.1726 13.1429H4.54743C4.15314 14.3783 3.94286 15.7714 3.94286 17.0857ZM29.624 21.0286C30.0183 19.7931 30.2286 18.4 30.2286 17.0857C30.2286 15.7714 30.0183 14.3783 29.624 13.1429H23.9989C24.4174 15.7548 24.4174 18.4167 23.9989 21.0286H29.624ZM12.8011 13.1429L12.4857 17.0857L12.8011 21.0286H21.3703C21.7888 18.4167 21.7888 15.7548 21.3703 13.1429H12.8011V13.1429ZM17.0857 30.2286C17.5589 30.2286 18.032 30.2286 18.4789 30.1497C19.136 28.7829 20.1349 26.4697 20.8446 23.6571H13.3269C14.0366 26.4697 15.0354 28.7829 15.6926 30.1497L17.0857 30.2286ZM28.4674 23.6571H23.4731C22.8686 26.0754 22.0537 28.0994 21.4229 29.4926C24.4008 28.4657 26.9042 26.3919 28.4674 23.6571ZM5.704 23.6571C7.26719 26.3919 9.77065 28.4657 12.7486 29.4926C12.1177 28.0994 11.3029 26.0754 10.6983 23.6571H5.704Z"
-                                        fill="#444444" />
-                                </svg>
-                                <p>Project Name</p>
-                                <div class='btn d' data-num='12'>Load more</div>
                             </div>
                         </div>
                     </div>

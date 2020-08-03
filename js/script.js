@@ -8,36 +8,90 @@ const close = document.querySelector('.modal .close');
 const modal = document.querySelector('.modal');
 close.addEventListener('click', () => {
     modal.classList.add('hide');
-    document.querySelector('#container').style.filter = 'blur(0)';
+    modal.classList.remove('back');
 })
 box.forEach(el => {
     el.addEventListener('click', () => {
-        // updateModal(el.getAttribute('data-num'))
+        updateModal(parseInt(el.getAttribute('data-num')));
         modal.classList.remove('hide');
-        document.querySelector('#container').style.filter = 'blur(5px)';
+        modal.classList.add('back');
     })
 });
 const projects = [
     {
-        title: "Project Name",
-        descr: "",
-        img: "",
-        demo: "",
-        gitOrFig: ""
+        title: "NikeShop",
+        descr: "A single page website like real Nike shop. You can delete and add trainers to shop cart after selecting available color and size. Totally responsive!",
+        img: "/img/1.jpg",
+        demo: "https://nikeshop.algos.uz",
+        gitOrFig: "https://www.figma.com/file/TDLnzhxZrg1CVNrLYl82O1/algo-nikeshop?node-id=0%3A1"
+    },
+    {
+        title: "Alpetito",
+        descr: "A landing page for the restaurant Alpetito (made-up name). Appetizing menu and nice effect when you hover over nav link. Totally responsive!",
+        img: "/img/2.jpg",
+        demo: "https://alpetito.algos.uz",
+        gitOrFig: "https://www.figma.com/file/gW6DeMwLIebHrLjqy8Xinn/algo-alpetito?node-id=0%3A1"
+    },
+    {
+        title: "HomeControl",
+        descr: "One page home control application that has different features like monitoring power & water usage, turning off & on appliances, view surveilance. Not responsive!",
+        img: "/img/3.jpg",
+        demo: "https://home.algos.uz",
+        gitOrFig: "https://www.figma.com/file/JgmY4o2fwNOcGceHtzJDu3/algo-home?node-id=0%3A1"
+    },
+    {
+        title: "DroneZone",
+        descr: "A landing page for the company who sells drones with camera. Elegent gradient header (my favourite). Totally responsive!",
+        img: "/img/4.jpg",
+        demo: "https://dronezone.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/dron-landing-page"
+    },
+    {
+        title: "AlBeyond",
+        descr: "A web page for creative team of art. Before creating my own portfolio, building this page was brainstorming",
+        img: "/img/5.jpg",
+        demo: "https://albeyond.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/albeyond"
+    },
+    {
+        title: "Admino",
+        descr: "A platform for admins of website. I learnt it in one of tutorials I watched and was fruitful to enhance my Bootstrap skills.",
+        img: "/img/6.jpg",
+        demo: "https://admino.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/admino"
+    },
+    {
+        title: "Calculator",
+        descr: "One of my initial works that pushed me forward. Although it is not complex, it's valuable for me, so I put it on first place",
+        img: "/img/7.jpg",
+        demo: "https://calc.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/calculator"
+    },
+    {
+        title: "Typeed",
+        descr: "A game",
+        img: "/img/8.jpg",
+        demo: "https://typeed.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/typeed"
+    },
 
-    }
+
 ]
 function updateModal(n) {
-    document.querySelector('.modal img').setAttribute('src', ``);
-    document.querySelector('.modal .title').innerHTML = '';
-    document.querySelector('.modal .description').innerHTML = '';
-    if (n > 6) {
-        document.querySelector('.modal .demo').setAttribute('href', ``);
+    document.querySelector('.modal img').setAttribute('src', `${projects[n].img}`);
+    document.querySelector('.modal .title').innerHTML = `${projects[n].title}`;
+    document.querySelector('.modal .description').innerHTML = `${projects[n].descr}`;
+    if (n >= 3) {
+        document.querySelector('.modal .demo').setAttribute('href', `${projects[n].demo}`);
+        document.querySelector('.modal .github').style.display = 'block';
         document.querySelector('.modal .github').setAttribute('href', ``);
+        document.querySelector('.modal .figma').style.display = 'none';
     }
     else {
-        document.querySelector('.modal .demo').setAttribute('href', ``);
-        document.querySelector('.modal .design').setAttribute('href', ``);
+        document.querySelector('.modal .demo').setAttribute('href', `${projects[n].demo}`);
+        document.querySelector('.modal .figma').style.display = 'block';
+        document.querySelector('.modal .figma').setAttribute('href', `${projects[n].gitOrFig}`);
+        document.querySelector('.modal .github').style.display = 'none';
     }
 }
 web.addEventListener('click', () => {
