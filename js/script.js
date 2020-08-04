@@ -69,11 +69,40 @@ const projects = [
     },
     {
         title: "Typeed",
-        descr: "A game",
+        descr: "A game-based app to find out how fast you type. There are 3 levels and my highest result is 48 words in 'Hard level'. Can you break my record?",
         img: "/img/8.jpg",
         demo: "https://typeed.algos.uz",
         gitOrFig: "https://github.com/prince-algo/typeed"
     },
+    {
+        title: "AlQuiz",
+        descr: "A math quiz. Do not worry, you don't calculate. You will select whether equation is correct or not in a minute",
+        img: "/img/9.jpg",
+        demo: "https://quiz.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/mathquiz"
+    },
+    {
+        title: "LyricsGo",
+        descr: "Do you love singing? My app can find song lyrics. In this project I sharpened my JS skills (#promise , #fetching)",
+        img: "/img/10.jpg",
+        demo: "https://lyricsgo.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/lyricsgo"
+    },
+    {
+        title: "R&P&S",
+        descr: "I'm sure you have played this game ever. What about playing with robot?",
+        img: "/img/11.jpg",
+        demo: "https://rps.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/rock-paper-scissors"
+    },
+    {
+        title: "Financo",
+        descr: "A to-do list app. I love Vanilla JS but this app made me realize why I should learn framework.",
+        img: "/img/12.jpg",
+        demo: "https://financo.algos.uz",
+        gitOrFig: "https://github.com/prince-algo/financo"
+    },
+
 
 
 ]
@@ -84,7 +113,7 @@ function updateModal(n) {
     if (n >= 3) {
         document.querySelector('.modal .demo').setAttribute('href', `${projects[n].demo}`);
         document.querySelector('.modal .github').style.display = 'block';
-        document.querySelector('.modal .github').setAttribute('href', ``);
+        document.querySelector('.modal .github').setAttribute('href', `${projects[n].gitOrFig}`);
         document.querySelector('.modal .figma').style.display = 'none';
     }
     else {
