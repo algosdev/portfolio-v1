@@ -6,6 +6,46 @@ const webPro = document.querySelectorAll('#pro')[1];
 const box = document.querySelectorAll('.more .btn');
 const close = document.querySelector('.modal .close');
 const modal = document.querySelector('.modal');
+
+function scrollRev() {
+    window.sr = ScrollReveal();
+    function justFadeIn(el, d = 0) {
+        sr.reveal(el, {
+            duration: 2000,
+            origin: 'bottom',
+            delay: d
+        });
+    };
+    justFadeIn('.header .name', 200);
+    justFadeIn('.header .lg', 1400);
+    justFadeIn('.header .md', 2500);
+    justFadeIn('.header .whatDo', 2500);
+    justFadeIn('.header .nav', 2500);
+    justFadeIn('.header-btn', 2500);
+    justFadeIn('.fadeIn');
+
+}
+
+let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
+if (first == true) {
+    setTimeout(() => {
+        window.onload = whenOnload();
+        scrollRev();
+        setTimeout(() => {
+            document.querySelector("body").style.overflow = "visible";
+        }, 3000);
+        localStorage.setItem('first', 'false');
+    }, 5300);
+}
+else {
+    whenOnload();
+    document.querySelector("body").style.overflow = "visible";
+}
+function whenOnload() {
+    console.log("Loaded");
+    document.querySelector(".preload-cont").style.display = "none";
+}
+
 close.addEventListener('click', () => {
     modal.classList.add('hide');
     modal.classList.remove('back');
@@ -97,7 +137,7 @@ const projects = [
     },
     {
         title: "Financo",
-        descr: "A to-do list app. I love Vanilla JS but this app made me realize why I should learn framework.",
+        descr: "Useful app to control your income and expenses. I love Vanilla JS but this app made me realize why I should learn framework.",
         img: "/img/12.jpg",
         demo: "https://financo.algos.uz",
         gitOrFig: "https://github.com/prince-algo/financo"
