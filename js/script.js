@@ -7,7 +7,10 @@ const box = document.querySelectorAll('.more .btn');
 const close = document.querySelector('.modal .close');
 const modal = document.querySelector('.modal');
 
-function scrollRev() {
+let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
+if (first == true) {
+    setTimeout(() => {
+        function scrollRev() {
     window.sr = ScrollReveal();
     function justFadeIn(el, d = 0) {
         sr.reveal(el, {
@@ -23,17 +26,9 @@ function scrollRev() {
     justFadeIn('.header .nav', 2500);
     justFadeIn('.header-btn', 2500);
     justFadeIn('.fadeIn');
-
 }
-
-let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
-if (first == true) {
-    setTimeout(() => {
         scrollRev();
         window.onload = whenOnload();
-        setTimeout(() => {
-            document.querySelector("body").style.overflow = "visible";
-        }, 3000);
         localStorage.setItem('first', 'false');
     }, 5300);
 }
@@ -42,8 +37,10 @@ else {
     document.querySelector("body").style.overflow = "visible";
 }
 function whenOnload() {
-    console.log("Loaded");
     document.querySelector(".preload-cont").style.display = "none";
+     setTimeout(() => {
+            document.querySelector("body").style.overflow = "visible";
+        }, 3000);
 }
 
 close.addEventListener('click', () => {
