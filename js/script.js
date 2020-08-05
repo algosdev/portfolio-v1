@@ -17,7 +17,7 @@ if (first == true) {
             origin: 'bottom',
             delay: d
         });
-    };
+        };
     justFadeIn('.header .name');
     justFadeIn('.header .lg', 1400);
     justFadeIn('.header .md', 2500);
