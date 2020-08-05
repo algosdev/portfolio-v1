@@ -10,7 +10,6 @@ const modal = document.querySelector('.modal');
 let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
 if (first == true) {
     setTimeout(() => {
-        function scrollRev() {
     window.sr = ScrollReveal();
     function justFadeIn(el, d = 0) {
         sr.reveal(el, {
@@ -26,8 +25,6 @@ if (first == true) {
     justFadeIn('.header .nav', 2500);
     justFadeIn('.header-btn', 2500);
     justFadeIn('.fadeIn');
-}
-        scrollRev();
         window.onload = whenOnload();
         localStorage.setItem('first', 'false');
     }, 5300);
