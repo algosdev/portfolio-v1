@@ -29,8 +29,8 @@ function scrollRev() {
 let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
 if (first == true) {
     setTimeout(() => {
-        window.onload = whenOnload();
         scrollRev();
+        window.onload = whenOnload();
         setTimeout(() => {
             document.querySelector("body").style.overflow = "visible";
         }, 3000);
