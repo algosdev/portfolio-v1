@@ -83,7 +83,7 @@ const projects = [
         title: "DroneZone",
         descr: "A landing page for the company who sells drones with camera. Elegent gradient header (my favourite). Totally responsive!",
         img: "/img/4.jpg",
-        demo: "https://dronezone.algos.uz",
+        demo: "https://dronzone.algos.uz",
         gitOrFig: "https://github.com/prince-algo/dron-landing-page"
     },
     {
