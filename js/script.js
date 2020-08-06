@@ -10,21 +10,56 @@ const modal = document.querySelector('.modal');
 let first = (localStorage.getItem("first") === null) ? true : localStorage.getItem("first");
 if (first == true) {
     setTimeout(() => {
-    window.sr = ScrollReveal();
-    function justFadeIn(el, d = 0) {
-        sr.reveal(el, {
-            duration: 2000,
-            origin: 'bottom',
-            delay: d
-        });
+        window.sr = ScrollReveal();
+        function justFadeIn(el, d = 0) {
+            sr.reveal(el, {
+                duration: 2000,
+                origin: 'bottom',
+                delay: d
+            });
         };
-    justFadeIn('.header .name');
-    justFadeIn('.header .lg', 1400);
-    justFadeIn('.header .md', 2500);
-    justFadeIn('.header .whatDo', 2500);
-    justFadeIn('.header .nav', 2500);
-    justFadeIn('.header-btn', 2500);
-    justFadeIn('.fadeIn');
+        justFadeIn('.fadeIn');
+
+        let tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 0
+        });
+        tl.add({
+            targets: '.header .name',
+            opacity: [0, 1],
+            easing: 'easeInOutQuad',
+            duration: 1000
+        })
+            .add({
+                targets: '.header .lg',
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 1000
+            }, '+=300').
+            add({
+                targets: '.header .md',
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 500
+            }, '+=500')
+            .add({
+                targets: '.header .whatDo',
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 500
+            })
+            .add({
+                targets: '.header .header-btn',
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 500
+            })
+            .add({
+                targets: '.header .nav',
+                opacity: [0, 1],
+                easing: 'easeInOutQuad',
+                duration: 500
+            })
         window.onload = whenOnload();
         localStorage.setItem('first', 'false');
     }, 5300);
@@ -33,11 +68,13 @@ else {
     whenOnload();
     document.querySelector("body").style.overflow = "visible";
 }
+
+
 function whenOnload() {
     document.querySelector(".preload-cont").style.display = "none";
-     setTimeout(() => {
-            document.querySelector("body").style.overflow = "visible";
-        }, 3000);
+    setTimeout(() => {
+        document.querySelector("body").style.overflow = "visible";
+    }, 5000);
 }
 
 close.addEventListener('click', () => {
