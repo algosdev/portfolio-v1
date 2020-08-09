@@ -115,63 +115,63 @@ const projects = [
         descr: "A landing page for the company who sells drones with camera. Elegent gradient header (my favourite). Totally responsive!",
         img: "/img/4.jpg",
         demo: "https://dronzone.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/dron-landing-page"
+        gitOrFig: "https://github.com/algosdev/dron-landing-page"
     },
     {
         title: "AlBeyond",
         descr: "A web page for creative team of art. Before creating my own portfolio, building this page was brainstorming",
         img: "/img/5.jpg",
         demo: "https://albeyond.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/albeyond"
+        gitOrFig: "https://github.com/algosdev/albeyond"
     },
     {
         title: "Admino",
         descr: "A platform for admins of website. I learnt it in one of tutorials I watched and was fruitful to enhance my Bootstrap skills.",
         img: "/img/6.jpg",
         demo: "https://admino.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/admino"
+        gitOrFig: "https://github.com/algosdev/admino"
     },
     {
         title: "Calculator",
         descr: "One of my initial works that pushed me forward. Although it is not complex, it's valuable for me, so I put it on first place",
         img: "/img/7.jpg",
         demo: "https://calc.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/calculator"
+        gitOrFig: "https://github.com/algosdev/calculator"
     },
     {
         title: "Typeed",
         descr: "A game-based app to find out how fast you type. There are 3 levels and my highest result is 48 words in 'Hard level'. Can you break my record?",
         img: "/img/8.jpg",
         demo: "https://typeed.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/typeed"
+        gitOrFig: "https://github.com/algosdev/typeed"
     },
     {
         title: "AlQuiz",
         descr: "A math quiz. Do not worry, you don't calculate. You will select whether equation is correct or not in a minute",
         img: "/img/9.jpg",
         demo: "https://quiz.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/mathquiz"
+        gitOrFig: "https://github.com/algosdev/mathquiz"
     },
     {
         title: "LyricsGo",
         descr: "Do you love singing? My app can find song lyrics. In this project I sharpened my JS skills (#promise , #fetching)",
         img: "/img/10.jpg",
         demo: "https://lyricsgo.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/lyricsgo"
+        gitOrFig: "https://github.com/algosdev/lyricsgo"
     },
     {
         title: "R&P&S",
         descr: "I'm sure you have played this game ever. What about playing with robot?",
         img: "/img/11.jpg",
         demo: "https://rps.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/rock-paper-scissors"
+        gitOrFig: "https://github.com/algosdev/rock-paper-scissors"
     },
     {
         title: "Financo",
         descr: "Useful app to control your income and expenses. I love Vanilla JS but this app made me realize why I should learn framework.",
         img: "/img/12.jpg",
         demo: "https://financo.algos.uz",
-        gitOrFig: "https://github.com/prince-algo/financo"
+        gitOrFig: "https://github.com/algosdev/financo"
     },
 
 
